@@ -3,7 +3,7 @@ This is the official GitHub repository for our team's contribution (**ADMIS**) t
 
 # [2nd Edition FRCSyn: Face Recognition Challenge in the Era of Synthetic Data](https://frcsyn.github.io/CVPR2024.html)
 
-![image]poster.jpeg)
+![image](poster.jpeg)
 
 * A summary paper will be published in the **[proceedings of the IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024](https://cvpr.thecvf.com/)**
   
