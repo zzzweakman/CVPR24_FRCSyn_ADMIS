@@ -9,5 +9,5 @@ This is the official GitHub repository for our team's contribution (**ADMIS**) t
   
 * Codes for training our generative and recognition models will be released soon.
 
-* If you are interested in the data used in our competition, please contact us at **zzhizhou66@gmail.com**. We are currently collecting our experimental results and will soon make public the checkpoints of the recognition models trained with this dataset, along with their performance on common benchmarks such as LFW, CFP-FP, IJB-B, and more.
+* If you are interested in the data used in our competition, please contact **zzhizhou66@gmail.com**. We are currently collecting our experimental results and will soon make public the checkpoints of the recognition models trained with this dataset, along with their performance on common benchmarks such as LFW, CFP-FP, IJB-B, and more.
   
