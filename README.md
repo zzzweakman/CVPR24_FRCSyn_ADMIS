@@ -6,7 +6,7 @@ This is the official GitHub repository for our team's contribution (**ADMIS**) t
 ![image](poster.jpeg)
 
 * A summary paper will be published in the **[proceedings of the IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024](https://cvpr.thecvf.com/)**
-
+## Pipeline
 ### We use a latent diffusion model (LDM) based on [IDiff-Face](https://github.com/fdbtrs/IDiff-Face) to synthesize faces. The LDM is conditioned using identity embeddings as contexts, extracted from faces by a pretrained [ElasticFace](https://github.com/fdbtrs/ElasticFace) iResNet-101 model.
 ![image](pipeline.png)
 
