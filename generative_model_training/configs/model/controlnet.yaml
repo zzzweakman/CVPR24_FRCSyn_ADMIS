@@ -1,0 +1,2 @@
+_target_: models.diffusion.controlnet.ControlledUnetModel
+only_mid_control: False

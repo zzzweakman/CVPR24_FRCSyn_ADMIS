@@ -1,0 +1,11 @@
+release_ip: True
+## command 执行方式  mpi, hvd, rpf_mpi, multi_node, multi_gpu
+template: mpi
+# 自定义环境变量
+envs:
+  - "NCCL_DEBUG=INFO"
+  - "NCCL_LAUNCH_MODE=GROUP"
+  - "NCCL_DEBUG_SUBSYS=INIT"
+## 训练执行命令
+command: 
+  - "python3 -u tface_train.py"

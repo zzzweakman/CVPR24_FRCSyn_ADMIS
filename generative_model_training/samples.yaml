@@ -1,0 +1,14 @@
+checkpoint:
+  path: ./ckpt/ADMIS_FRCSyn_ckpt/ema_averaged_model_200000.ckpt
+  global_step: null
+  use_non_ema: true
+sampling:
+  gpu_idx: 0
+  seed: 41
+  contexts_file: ../dataset/context_database/elasticface_embeddings/elasticface_embeddings.npy
+  save_dir: ./samples
+  batch_size: 50
+  n_contexts: 10000
+  num_workers: 1
+  pin_memory: true
+  n_samples_per_context: 50

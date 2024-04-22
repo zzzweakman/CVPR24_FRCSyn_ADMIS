@@ -1,0 +1,63 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - diffusion: ddpm                    # config for the diffusion (beta schedule, T, ...)
+  - model: unet_cond_ca_cpd25       # config for the epsilon prediction model
+  - dataset: CASIA_file              # config for the dataset (data path, number of classes, image channels, ...)
+  - experiment: null                   # additional temporary experiment configurations
+  - paths: gpu_cluster             # system-specific paths
+
+latent_diffusion: true
+
+constants:                         # some constants (can be overriden by defaults, e.g. the image_channels by the dataset)
+  seed: 0
+  image_size: -1
+  input_channels: -1
+  n_classes: 0
+
+training:
+  precision: 16
+  batch_size: 64
+  num_workers: 1
+  pin_memory: true
+  steps: 900_000
+  steps_between_sampling: 2000
+  steps_between_eval: 50000
+  steps_between_logging: 500
+  steps_of_checkpoints:
+    - 100_000
+    - 250_000
+    - 400_000
+    - 600_000
+    - 800_000
+    - 900_000
+  context_dropout: 0
+  context_permutation: 0.0
+  ema:
+    _partial_: true
+    _target_: utils.ema.EMAModel
+    inv_gamma: 1.0
+    power: 0.75
+    min_value: 0.0
+    max_value: 0.9999
+  optimizer:
+    _partial_: true
+    _target_: torch.optim.Adam
+    lr: 1e-4
+  lr_scheduler:
+    _partial_: true
+    _target_: torch.optim.lr_scheduler.CosineAnnealingWarmRestarts
+    T_0: 10_000
+    T_mult: 2
+  checkpoint:
+    restore: false
+    path: ""
+    VQEncoder: "ckpt/autoencoder/first_stage_encoder_state_dict.pt"
+    VQDecoder: "ckpt/autoencoder/first_stage_decoder_state_dict.pt"
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: ./logs/${now:%Y-%m-%d}/${now:%H-%M-%S}

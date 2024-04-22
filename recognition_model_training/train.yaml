@@ -1,0 +1,52 @@
+SEED: 1336 # random seed for reproduce results
+DATA_ROOT: '../dataset/CASIA/TFR_training_data' # the parent root where your train/val/test data are stored
+INDEX_ROOT: '../dataset/CASIA/TFR_training_data'
+DATASETS: # the dataset index name
+  - name: Syn_10k # [Syn_30k, Syn_10k, TFR-CASIA_NoCrop]
+    batch_size: 64
+    weight: 1.0
+    scale: 64
+    margin: 0.5
+
+BACKBONE_RESUME: ""
+META_RESUME: ""
+ 
+# BACKBONE_NAME: 'EfficientNetB0'
+INPUT_SIZE: [ 112, 112 ] # support: [112, 112] and [224, 224]
+EMBEDDING_SIZE: 512 # feature dimension
+
+MODEL_ROOT: './ckpt' # the root to buffer your checkpoints
+LOG_ROOT: './logs' # the root to log your train/val status
+
+DIST_FC: true
+LOSS_NAME: 'DistCrossEntropy' # support: ['DistCrossEntropy', 'Softmax']
+
+RGB_MEAN: [ 0.5, 0.5, 0.5 ] # for normalize inputs to [-1, 1]
+RGB_STD: [ 0.5, 0.5, 0.5 ]
+WARMUP_STEP: -1
+
+### FR baseline ###
+BACKBONE_NAME: 'IR_50'
+LRS: [ 0.1, 0.01, 0.001, 0.0001 ] # initial LR
+METHOD: "TF-Synthetic" # support: [TF-Synthetic]
+CASIA_clean_txt_path: "../dataset/CASIA/CASIA_namelist.txt"
+HEAD_RESUME: ""  
+HEAD_NAME: 'ArcFace' # support:  ['ArcFace', 'CurricularFace', 'CosFace']
+AdaFace_augment_prob: 0.2
+
+
+START_EPOCH: 0 # start epoch
+NUM_EPOCH: 40 # total epoch number
+SAVE_EPOCHS: [ 22, 28, 32, 40]
+STAGES: [ 22, 28, 32 ] # epoch stages to decay learning rate
+WEIGHT_DECAY: 0.0005 # do not apply to batch_norm parameters
+MOMENTUM: 0.9
+WORLD_SIZE: 8
+RANK: 0
+LOCAL_RANK: 0
+DIST_BACKEND: 'nccl'
+DIST_URL: 'env://'
+NUM_WORKERS: 8
+AMP: false # fp16 for backbone
+TASK: FR # FR, Recon
+
