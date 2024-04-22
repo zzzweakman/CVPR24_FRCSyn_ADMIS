@@ -22,7 +22,7 @@ We train the recognition model based on [TFace](https://github.com/Tencent/TFace
 - [ IR-50 model + Syn_30k + ArcFace](https://drive.google.com/drive/folders/1vv4807YRYO1zt8fvYXhGTNX2fn7Z8ey7?usp=drive_link)
 
 
-The evaluation results of our pretrained face recognition model on widely used benchmark:
+The evaluation results of our pretrained face recognition models on widely used benchmark:
 
 |    Backbone    |      Head      |       Dataset      |   Id   |  LFW  | CFP-FP | CPLFW | AGEDB | CALFW | Average |
 | :------------: | :------------: | :----------------: | :----: | :---: | :----: | :---: | :---: | :---: | :----:  |
