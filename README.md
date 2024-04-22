@@ -42,7 +42,7 @@ Our method can mainly be divided into **identity conditioned LDM training**, **c
 * **Download the data and pretrained models required for training LDM:** The training **embeddings** used as contexts during training and their corresponding **images** have to be downloaded from the [link](https://drive.google.com/drive/folders/1OR93oblKiD4UvUTwZUHjvW80FeXHHnXz?usp=sharing) and placed under `dataset/CASIA`. 
 The [pre-trained autoencoder](https://drive.google.com/drive/folders/1jEgr60OAR6hjbaF651723IBYG_DF0kGf?usp=drive_link) for the latent diffusion training is obtained from the pre-trained `fhq256` LDM from [Rombach et al.](https://github.com/CompVis/latent-diffusion/blob/main/models/ldm/ffhq256/config.yaml) please follow their license distribution. For training, make sure the tree of the directory is as follows:
   ```
-    ADMIS_FRCSyn
+    CVPR24_FRCSyn_ADMIS
     ├── dataset
     │   ├── CASIA
     │   │   ├── elasticface_embeddings # context file and image index file
@@ -70,7 +70,7 @@ To synthesize new faces with unseen identities, [IDiff-Face](https://github.com/
 * **Prepare contexts:**
 To facilitate ease of use, we have directly supplied the pre-generated context faces along with the context embeddings processed via the [Elasticface](https://github.com/fdbtrs/ElasticFace) model. Please download them from this [link](https://drive.google.com/drive/folders/1fss6Y6d25lzxaUXT2YgdxezgXUJkm4Zp?usp=sharing) and place them in `dataset/context_database`. For sampling, make sure the tree of the directory is as follows:
   ```
-    ADMIS_FRCSyn
+    CVPR24_FRCSyn_ADMIS
     ├── dataset
     │   ├── context_database
     │   │   ├── elasticface_embeddings # context file 
@@ -81,7 +81,7 @@ To facilitate ease of use, we have directly supplied the pre-generated context f
 * **Run sampling script:**
 If you choose to utilize our pretrained LDM checkpoint, please download the [Pre-trained LDM (25% CPD)](https://drive.google.com/file/d/1r8b-qlkZAkJeUQ8lPXzq7rTUjsMAuwZs/view?usp=sharing) and make sure the tree of the directory is as follows:
     ```
-    ADMIS_FRCSyn
+    CVPR24_FRCSyn_ADMIS
     ├── generative_model_training
     │   ├── ckpt
     │   │   ├── ADMIS_FRCSyn_ckpt
