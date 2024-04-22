@@ -122,6 +122,7 @@ If you choose to utilize our pretrained LDM checkpoint, please download the [Pre
 * **Test:**
   Detail implementations and steps see [Test](https://github.com/Tencent/TFace/tree/master/recognition/test) in [TFace](https://github.com/Tencent/TFace) repository. 
 
+If you have more questions, please contact **zzhizhou66@gmail.com**.
 
 
 ## Acknowledgement
