@@ -12,7 +12,7 @@ We use a latent diffusion model (LDM) based on [IDiff-Face](https://github.com/f
 
 ## Dataset and pretrained models
 We use the CASIA-WebFace dataset to train an IDiff-Face diffusion model. The download link for our pretrained diffusion model weight is:
-- [Pre-trained LDM (25% CPD)](https://drive.google.com/file/d/1r8b-qlkZAkJeUQ8lPXzq7rTUjsMAuwZs/view?usp=sharing)
+- [Pretrained LDM (25% CPD)](https://drive.google.com/file/d/1r8b-qlkZAkJeUQ8lPXzq7rTUjsMAuwZs/view?usp=sharing)
 
 We use **10K** identities x 50 images dataset in SubTask 1.1/2.1 and **30k** identities x 50 images in SubTask 2.1/2.2. We provide the pre-generated synthetic **10K** identities dataset at:
 - [ Syn_10k](https://drive.google.com/file/d/1aL7DpqGVFudp64x6p6eiNT-eQvqqJmYz/view?usp=drive_link)
