@@ -126,7 +126,7 @@ If you have more questions, please contact **zzhizhou66@gmail.com**.
 
 
 ## Acknowledgement
-This repo is modified and adapted on these great repositories, we thank these author a lot for their great efforts.
+This repo is modified and adapted on these great repositories, we thank these authors a lot for their great efforts.
 * [IDiff-Face](https://github.com/fdbtrs/IDiff-Face)
 * [TFace](https://github.com/Tencent/TFace)
 * [DCFace](https://github.com/mk-minchul/dcface)
