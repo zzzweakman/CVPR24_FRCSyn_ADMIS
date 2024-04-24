@@ -1,4 +1,4 @@
-# CVPR24_FRCSyn_ADMIS
+# CVPR24_FRCSyn_ADMIS [![arXiv](https://img.shields.io/badge/arXiv-2402.18078-b31b1b.svg)](https://arxiv.org/abs/2404.10378) 
 This is the official GitHub repository for our team's contribution (**ADMIS**) to 
 
 # [2nd Edition FRCSyn: Face Recognition Challenge in the Era of Synthetic Data](https://frcsyn.github.io/CVPR2024.html)
