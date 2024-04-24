@@ -13,7 +13,7 @@ def parse_args():
         description='imgs to tfrecord')
     parser.add_argument('--img_list', default="../../dataset/Syn_data/images", type=str, 
                         help='path to the image file')
-    parser.add_argument('--tfrecords_dir', default='../../dataset/Syn_data/TFR_trainging_data/', type=str,  required=False,
+    parser.add_argument('--tfrecords_dir', default='../../dataset/Syn_data/TFR_training_data/', type=str,  required=False,
                         help='path to the output of tfrecords dir path')
     parser.add_argument('--tfrecords_name', default='Syn_10k', type=str,  required=False,
                         help='file name')
