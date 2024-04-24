@@ -113,7 +113,7 @@ If you choose to utilize our pretrained LDM checkpoint, please download the [Pre
 
 
 *  **Train:**
-  Modified the `DATA_ROOT` and `INDEX_ROOT` in `train.yaml`, `DATA_ROOT` is the name of the tfrecord file,  `INDEX_ROOT` is the name of the index file.
+  Modified the `DATA_ROOT` and `INDEX_ROOT` in `train.yaml`, `DATA_ROOT` and `INDEX_ROOT` are both the name of the index file.
     ```bash
     cd recognition_model_training
     bash local_train.sh
