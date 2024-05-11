@@ -84,7 +84,7 @@ class DiffusionSamplerLite(LightningLite):
         contexts = contexts / contexts_norm[:, np.newaxis]
         print(contexts.shape)
 
-        context_ids = list(i for i in range(0, contexts.shape[0], 2))
+        context_ids = list(i for i in range(0, contexts.shape[0]))
 
 
         model_name = cfg.checkpoint.path.split("/")[-1]
