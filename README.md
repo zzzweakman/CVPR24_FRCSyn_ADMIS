@@ -14,15 +14,14 @@ We use a latent diffusion model (LDM) based on [IDiff-Face](https://github.com/f
 We use the CASIA-WebFace dataset to train an IDiff-Face diffusion model. The download link for our pretrained diffusion model weight is:
 - [Pretrained LDM (25% CPD)](https://drive.google.com/file/d/1r8b-qlkZAkJeUQ8lPXzq7rTUjsMAuwZs/view?usp=sharing)
 
-We use **10K** identities x 50 images dataset in SubTask 1.1/2.1 and **30k** identities x 50 images in SubTask 2.1/2.2. We provide the pre-generated synthetic **10K** identities dataset at:
-- [ Syn_10k](https://drive.google.com/file/d/1aL7DpqGVFudp64x6p6eiNT-eQvqqJmYz/view?usp=drive_link)
+We use **10K** identities x 50 images dataset in SubTask 1.1/2.1 and **30k** identities x 50 images in SubTask 2.1/2.2. Please contact [Yuxi Mi](yxmi20@fudan.edu.cn) to get the dataset.
 
-We train the recognition model based on [TFace](https://github.com/Tencent/TFace). The pretrained IR-50 model trained on the Synthetic dataset can be accessible in: 
+We train the recognition model based on [TFace](https://github.com/Tencent/TFace). The pretrained IR-50 model trained on the Synthetic dataset can be accessed in: 
 - [ IR-50 model + Syn_10k + ArcFace](https://drive.google.com/drive/folders/1A2blJzOswQJVB5Mlm4ZriKJ-XLgr4hQp?usp=drive_link)
 - [ IR-50 model + Syn_30k + ArcFace](https://drive.google.com/drive/folders/1vv4807YRYO1zt8fvYXhGTNX2fn7Z8ey7?usp=drive_link)
 
 
-The evaluation results of our pretrained face recognition models on widely used benchmark:
+The evaluation results of our pretrained face recognition models on the widely used benchmark:
 
 |    Backbone    |      Head      |       Dataset      |   Id   |  LFW  | CFP-FP | CPLFW | AGEDB | CALFW | Average |
 | :------------: | :------------: | :----------------: | :----: | :---: | :----: | :---: | :---: | :---: | :----:  |
@@ -36,7 +35,7 @@ The evaluation results of our pretrained face recognition models on widely used 
 ## Usage
 Our method can mainly be divided into **identity conditioned LDM training**, **context enhanced sampling**, and **recognition model training**. Specifically, **identity conditioned LDM training** and **context enhanced sampling** are implemented based on the [IDiff-Face repository](https://github.com/fdbtrs/IDiff-Face). We make some modifications to its dataset and sampling codes. The implementation of **recognition model training** is fundamentally based on [TFace repository](https://github.com/Tencent/TFace), with only minor modifications applied to the 'transform' method to incorporate some additional cropping enhancements.
 
-### 1. Identity conditioned LDM training
+### 1. Identity-conditioned LDM training
 * **Install environment:** Please refer to ['How to use the code'](https://github.com/fdbtrs/IDiff-Face?tab=readme-ov-file#how-to-use-the-code) to set up the environment. 
 
 * **Download the data and pretrained models required for training LDM:** The training **embeddings** used as contexts during training and their corresponding **images** have to be downloaded from the [link](https://drive.google.com/drive/folders/1OR93oblKiD4UvUTwZUHjvW80FeXHHnXz?usp=sharing) and placed under `dataset/CASIA`. 
