@@ -14,7 +14,8 @@ We use a latent diffusion model (LDM) based on [IDiff-Face](https://github.com/f
 We use the CASIA-WebFace dataset to train an IDiff-Face diffusion model. The download link for our pretrained diffusion model weight is:
 - [Pretrained LDM (25% CPD)](https://drive.google.com/file/d/1r8b-qlkZAkJeUQ8lPXzq7rTUjsMAuwZs/view?usp=sharing)
 
-We use **10K** identities x 50 images dataset in SubTask 1.1/2.1 and **30k** identities x 50 images in SubTask 2.1/2.2. Please contact [Yuxi Mi](yxmi20@fudan.edu.cn) to get the dataset.
+We use **10K** identities × 50 images dataset in SubTask 1.1/2.1 and **30K** identities × 50 images in SubTask 2.1/2.2.  
+Please contact [Yuxi Mi](mailto:yxmi20@fudan.edu.cn) to obtain the dataset.
 
 We train the recognition model based on [TFace](https://github.com/Tencent/TFace). The pretrained IR-50 model trained on the Synthetic dataset can be accessed in: 
 - [ IR-50 model + Syn_10k + ArcFace](https://drive.google.com/drive/folders/1A2blJzOswQJVB5Mlm4ZriKJ-XLgr4hQp?usp=drive_link)
